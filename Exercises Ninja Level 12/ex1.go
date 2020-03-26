@@ -1,12 +1,19 @@
 package main
 
 import (
-	"Exercises Ninja Level 12/dog"
 	"fmt"
+	"github.com/GoesToEleven/go-programming/code_samples/008-ninja-level-twelve/01/dog"
 )
 
-func main() {
-	y:=10
+type canine struct {
+	name string
+	age  int
+}
 
-	fmt.Println(y, " years, in dog years is ", dog.Years(y))
+func main() {
+	fido := canine{
+		name: "Fido",
+		age:  dog.Years(10),
+	}
+	fmt.Println(fido)
 }
